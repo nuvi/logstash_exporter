@@ -29,6 +29,8 @@ workflows:
     jobs:
       - build
       - deploy:
+          requires:
+            - build
           filters:
             tag:
               only: /v[0-9]+(\.[0-9]+)*(-.*)*/
