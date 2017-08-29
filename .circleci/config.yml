@@ -2,7 +2,7 @@
 version: 2
 jobs:
   build:
-    working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
+    working_directory: /go/src/github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
     docker:
       # specify the version
       - image: circleci/golang:1.8
@@ -15,7 +15,7 @@ jobs:
 
 
   deploy:
-    working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
+    working_directory: /go/src/github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
     docker:
       - image: circleci/golang:1.8
     steps:
