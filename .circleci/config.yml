@@ -8,6 +8,9 @@ jobs:
       - image: circleci/golang:1.8
     steps:
       - checkout
+      - run:
+          name: Build Binaries
+          command: curl -sL https://git.io/goreleaser | bash
       - persist_to_workspace:
           root: /go
           paths:
