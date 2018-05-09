@@ -2,6 +2,7 @@
 Prometheus exporter for the metrics available in Logstash since version 5.0.
 
 ## Usage
+
 ```bash
 go get -u github.com/kardianos/govendor
 go get -u github.com/nuvi/logstash_exporter
